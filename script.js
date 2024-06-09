@@ -5,28 +5,25 @@
 //check if should add comma - DONE
 //update html - DONE
 
-
-let input;
-
 fizzBuzzCheck = (i) => {
     i+=1;
     if(i%3 == 0 && i%5 == 0) {
-        return 'FizzBuzz'
+        return '<span class="fizzbuzz">FizzBuzz</span>';
     }
     else if (i%3 == 0) {
-        return 'Fizz'
+        return '<span class="fizz">Fizz</span>';
     }
     else if (i%5 == 0) {
-        return 'Buzz'
+        return '<span class="buzz">Buzz</span>';
     }
     else {
-        return i
+        return '<span class="num">'+i+'</span>'
     }
 }
 
 commaCheck = (i) => {
     if (i !== 0) {
-        return ', '
+        return '<span class="comma">,</span> ';
     } else {return ''}
 }
 
@@ -35,22 +32,22 @@ updateHtml = (i) => {
 }
 
 
-numberCheck = () => {
+numberCheck = (input) => {
     for (let i = 0; i < input; i++) {
         updateHtml(i);
     }
 }
 
-correctInputCheck = () => {
+correctInputCheck = (input) => {
     if (input !== '' && input.toString().indexOf(".") == -1 && input.toString().indexOf("-") == -1 && input !== '0') {
         document.getElementById('output').innerHTML = '';
-        numberCheck();
+        numberCheck(input);
     } else {document.getElementById('output').innerHTML = 'Try entering "15"...';}
 }
 
 clicked = () => {
-    input = document.getElementById('userInput').value;
-    correctInputCheck();
+    let input = document.getElementById('userInput').value;
+    correctInputCheck(input);
     document.getElementById('userInput').focus();
 }
 
@@ -59,8 +56,29 @@ clearInput = () => {
     document.getElementById('userInput').focus();
 }
 
+document.addEventListener("DOMContentLoaded", function() {
+    document.getElementById('userInput').value = 15;
+    clicked();
+    let x = document.getElementById('list');
+    x.style.display = 'block';
+});
 
 
+
+
+hide = () => {
+    let x = document.getElementById('list');
+    let y = document.querySelector('.introHide');
+    if (x.style.display === 'block') {
+        x.style.display = 'none';
+        y.innerHTML = 'Show&#x25BC;'
+        y.style.marginBottom = "12px";
+    } else {
+        x.style.display = 'block';
+        y.innerHTML = 'Hide&#x25B2;'
+    }
+    document.getElementById('userInput').focus();
+}
 
 
 

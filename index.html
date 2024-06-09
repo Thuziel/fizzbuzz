@@ -10,11 +10,22 @@
 <body>
     <main>
         <form>
-            <input type="number" id="userInput" inputmode="numeric" autofocus/>
+            <input type="number" id="userInput" inputmode="numeric" autofocus />
             <button type="button" class="btn" onclick="clicked()">Print</button>
             <button type="button" class="btn" onclick="clearInput()">Clear</button>
         </form>
-        <p id="output">This program will print out every number between 1 and your input and the replace all mulitples of 3 with "Fizz", and all multiples of 5 with "Buzz".<br>Enter a non zero integer and press print to give it a try.</p>
+        <div class="output">
+            <div class="intro">
+                <button class="introHide" onclick="hide()">Hide&#x25B2;</button>
+                <ul id="list">
+                    <li>- Multiples of 3 = <span class="fizz">Fizz</span></li>
+                    <li>- Multiples of 5 = <span class="buzz">Buzz</span></li>
+                    <li>- Multiples of 3 AND 5 = <span class="fizzbuzz">FizzBuzz</span></li>
+                </ul>
+                <hr id="div">
+            </div>
+            <p id="output"></p>
+        </div>
     </main>
 </body>
 </html>
