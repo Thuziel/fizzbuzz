@@ -42,15 +42,21 @@ numberCheck = () => {
 }
 
 correctInputCheck = () => {
-    if (input !== '' && input.toString().indexOf(".") == -1) {
+    if (input !== '' && input.toString().indexOf(".") == -1 && input.toString().indexOf("-") == -1 && input !== '0') {
         document.getElementById('output').innerHTML = '';
         numberCheck();
-    }
+    } else {document.getElementById('output').innerHTML = 'Try entering "15"...';}
 }
 
 clicked = () => {
     input = document.getElementById('userInput').value;
     correctInputCheck();
+    document.getElementById('userInput').focus();
+}
+
+clearInput = () => {
+    document.getElementById('userInput').value = '';
+    document.getElementById('userInput').focus();
 }
 
 

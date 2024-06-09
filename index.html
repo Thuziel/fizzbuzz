@@ -8,10 +8,13 @@
     <script src="script.js"></script>
 </head>
 <body>
-    <form>
-        <input type="number" id="userInput">
-        <button type="button" onclick="clicked()" id="sumbit">Print</button>
-    </form>
-    <p id="output">Enter an Integer...</p>
+    <main>
+        <form>
+            <input type="number" id="userInput" inputmode="numeric" autofocus/>
+            <button type="button" class="btn" onclick="clicked()">Print</button>
+            <button type="button" class="btn" onclick="clearInput()">Clear</button>
+        </form>
+        <p id="output">This program will print out every number between 1 and your input and the replace all mulitples of 3 with "Fizz", and all multiples of 5 with "Buzz".<br>Enter a non zero integer and press print to give it a try.</p>
+    </main>
 </body>
 </html>
