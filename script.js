@@ -42,7 +42,7 @@ correctInputCheck = (input) => {
     if (input !== '' && input.toString().indexOf(".") == -1 && input.toString().indexOf("-") == -1 && input !== '0') {
         document.getElementById('output').innerHTML = '';
         numberCheck(input);
-    } else {document.getElementById('output').innerHTML = 'Try entering "15"...';}
+    } else {document.getElementById('output').innerHTML = 'Enter a number.';}
 }
 
 clicked = () => {
@@ -53,6 +53,7 @@ clicked = () => {
 
 clearInput = () => {
     document.getElementById('userInput').value = '';
+    document.getElementById('output').innerHTML = 'Enter a integer...';
     document.getElementById('userInput').focus();
 }
 

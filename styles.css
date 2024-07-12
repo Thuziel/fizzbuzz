@@ -15,7 +15,7 @@ body, html {
 
 main {width: 100%;}
 
-form {
+.firstForm {
     width: 100%;
     margin-bottom: 24px;
 }
@@ -81,6 +81,7 @@ input {
     list-style-type: none;
     padding: 4px 18px;
     display: block;
+    color: black;
 }
 
 hr,ul {margin-bottom: 12px;}
@@ -96,3 +97,4 @@ hr,ul {margin-bottom: 12px;}
     cursor: pointer;
     background-color: rgb(140, 140, 140);
 }
+

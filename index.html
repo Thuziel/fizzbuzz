@@ -9,21 +9,25 @@
 </head>
 <body>
     <main>
-        <form>
-            <input type="number" id="userInput" inputmode="numeric" autofocus />
+        <form class="firstForm">
+            <input type="number" id="userInput" autofocus"/>
             <button type="button" class="btn" onclick="clicked()">Print</button>
             <button type="button" class="btn" onclick="clearInput()">Clear</button>
         </form>
         <div class="output">
             <div class="intro">
                 <button class="introHide" onclick="hide()">Hide&#x25B2;</button>
-                <ul id="list">
-                    <li>- Multiples of 3 = <span class="fizz">Fizz</span></li>
-                    <li>- Multiples of 5 = <span class="buzz">Buzz</span></li>
-                    <li>- Multiples of 3 AND 5 = <span class="fizzbuzz">FizzBuzz</span></li>
-                </ul>
-                <hr id="div">
+                <form id="list">
+                    <span>
+                        <input type="number" name="" id="">
+                        <button>+</button>
+                        <input type="color">
+                        <input type="text">
+                    </span>
+                    
+                </form>
             </div>
+            <hr id="div">
             <p id="output"></p>
         </div>
     </main>
