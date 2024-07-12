@@ -61,7 +61,7 @@ document.addEventListener("DOMContentLoaded", function() {
     document.getElementById('userInput').value = 15;
     clicked();
     let x = document.getElementById('list');
-    x.style.display = 'block';
+    x.style.display = 'none';
 });
 
 

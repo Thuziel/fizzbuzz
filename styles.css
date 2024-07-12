@@ -78,9 +78,10 @@ input {
 }
 
 #list {
+    all: unset;
     list-style-type: none;
     padding: 4px 18px;
-    display: block;
+    display: none;
     color: black;
 }
 
@@ -91,6 +92,7 @@ hr,ul {margin-bottom: 12px;}
     padding: 4px 18px;
     border-radius: 5px;
     width: min-content;
+    margin-bottom: 12px;
 }
 
 .introHide:hover {
@@ -98,3 +100,17 @@ hr,ul {margin-bottom: 12px;}
     background-color: rgb(140, 140, 140);
 }
 
+
+
+.colorInput {
+    padding: 2px;   
+    width: 5%;
+    height: ;
+    cursor: pointer;
+}
+
+
+.entry {
+    display: flex;
+    height: 55px;
+}
